@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Projeto 3</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
+  <style>
+    .warp {
+        padding: 40px 0;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="warp">
+    <div class="row">
+      <div class="col-md-12">
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div id="menu" class="btn-group-vertical">
+            <button id="ponto-entrega" data-menu="1" class="btn btn-default btn-block">[1] Inserir ponto de
+              entrega</button>
+            <button id="item-entrega" data-menu="2" class="btn btn-default btn-block">[2] Inserir item de entrega</button>
+            <button id="inserir-caminhao" data-menu="3" class="btn btn-default btn-block">[3] Inserir caminhão</button>
+            <button id="associar-item" data-menu="4" class="btn btn-default btn-block">[4] Associar
+              item a ponto
+              de entrega</button>
+            <button id="associar-caminhao" data-menu="5" class="btn btn-default btn-block">[5] Associar
+              ponto de
+              entrega a caminhão</button>
+            <button id="realizar-entregas" data-menu="6" class="btn btn-default btn-block">[6] Realizar
+              entregas</button>
+            <button id="Sair" data-menu="0" class="btn btn-default btn-block">[0] Sair</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="sections">
+
+            <div id="tab-1" class="pontos">
+              <h2>Inserir ponto de entrega</h2>
+              <div id="form-ponto" class="form-group">
+                <label for="insert">Nome</label>
+                <input type="text" class="form-control" id="input-local">
+              </div>
+              <button id="btn-local" class="btn btn-default">Cadastrar</button>
+            </div>
+
+            <div id="tab-2" class="volumes hide">
+              <h2>Inserir item de entrega</h2>
+              <div class="form-group">
+                <label for="insert">Nome:</label>
+                <input type="text" class="form-control" id="input-volume">
+              </div>
+              <button id="btn-volume" class="btn btn-default">Cadastrar</button>
+            </div>
+
+            <div id="tab-3" class="caminhao hide">
+              <h2>Inserir caminhão</h2>
+              <div class="form-group">
+                <label for="insert">Placa</label>
+                <input type="text" class="form-control" id="input-caminhao">
+              </div>
+              <button id="btn-caminhao" class="btn btn-default">Cadastrar</button>
+            </div>
+
+            <div id="tab-4" class="item-ponto hide">
+              <h2>Associar item a ponto de entrega</h2>
+              <div class="form-group">
+                <label for="insert">Selecione o item</label>
+                <select name="select-item" class="form-control" id="select-item"></select>
+              </div>
+
+              <div class="form-group">
+                <label for="insert">Selecione o ponto de entrega</label>
+                <select name="select-ponto" class="form-control" id="select-ponto"></select>
+              </div>
+
+              <button id="btn-link-ponto" class="btn btn-default">Cadastrar</button>
+            </div>
+
+            <div id="tab-5" class="ponto-caminhao hide">
+              <h2>Associar ponto de entrega a caminhão</h2>
+              <div class="form-group">
+                <label for="insert">Selecione o ponto de entrega</label>
+                <select name="select-ponto" class="form-control" id="select-ponto"></select>
+              </div>
+
+              <div class="form-group">
+                <label for="insert">Selecione o caminhão</label>
+                <select name="select-caminhao" class="form-control" id="select-caminhao"></select>
+              </div>
+
+              <button id="btn-link-caminhao" class="btn btn-default">Cadastrar</button>
+            </div>
+
+            <div id="tab-6" class="entrega hide">
+              <h2>Realizar entrega</h2>
+              <div class="form-group">
+                <label for="insert">Realizar entrega</label>
+                <input type="text" class="form-control" id="input-entrega" disabled>
+              </div>
+              <button id="btn-entrega" class="btn btn-default">Entregar</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="rotas">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="negocios.js"></script>
+  <script src="model.js"></script>
+  <script src="controller.js"></script>
+</body>
+
+</html>

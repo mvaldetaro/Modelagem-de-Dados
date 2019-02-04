@@ -1,0 +1,288 @@
+@import "./style/_variables.scss";
+@import "./style/_mixins.scss";
+
+a {
+  color: #24ea28;
+  text-decoration: none;
+
+  &:hover {
+    color: #25a9f0;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.app {
+}
+
+.logo {
+  margin-right: 16px;
+  width: 80px;
+
+  @include mq("tablet-wide") {
+    width: 100px;
+  }
+}
+
+.container {
+  padding: 40px 20px;
+
+  @include mq("tablet-wide") {
+    padding: 40px;
+  }
+}
+
+.hackContainer {
+  padding: 40px 20px;
+
+  @include mq("tablet-wide") {
+    padding: 40px;
+  }
+}
+
+.commTitle {
+}
+
+.jogosRecentes {
+  padding: 24px 0;
+  background-color: rgba(25, 9, 28, 0.87);
+}
+
+.trailers {
+  padding: 24px 0;
+  //background: url("./images/bg80.jpg") no-repeat bottom center;
+  //background-size: cover;
+}
+.comunidade {
+  padding: 24px 0;
+}
+
+.listLink {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.listLink:hover {
+}
+
+.hero {
+  & > div {
+    background-size: cover !important;
+  }
+  .current {
+    padding: 80px 20px;
+    background-color: rgba(25, 9, 28, 0.87);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq("tablet-wide") {
+      padding: 80px 40px;
+    }
+  }
+  .description {
+    width: 100%;
+    display: block;
+
+    @include mq("tablet-wide") {
+      width: 80%;
+    }
+
+    @include mq("desktop") {
+      width: 60%;
+    }
+
+    p {
+      line-height: 1.6rem;
+    }
+  }
+
+  .title {
+    color: #f70e4a;
+  }
+
+  .capa {
+    display: none;
+
+    @include mq("tablet") {
+      display: block;
+      width: 200px;
+    }
+  }
+
+  .descGroup {
+    @include mq("tablet") {
+      padding-left: 40px;
+    }
+    flex: 1;
+  }
+}
+
+.plataformaItem {
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.rgb {
+  span {
+    display: block;
+    height: 2px;
+    width: 5%;
+    margin: 3px 0;
+  }
+  .r {
+    background-color: #f70e4a;
+  }
+  .g {
+    background-color: #24ea28;
+  }
+  .b {
+    background-color: #25a9f0;
+  }
+
+  &.full {
+    span {
+      width: 100%;
+    }
+  }
+}
+
+.gridListTitle {
+  color: #25a9f0;
+}
+
+.gridItem {
+  position: relative;
+  border-bottom: 4px solid rgba($color: #000000, $alpha: 0.3);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border-bottom: 4px solid rgba($color: #25a9f0, $alpha: 1);
+
+    img {
+      filter: saturate(125%);
+    }
+  }
+
+  .gridItemLink {
+    display: block;
+    position: relative;
+  }
+
+  .mask {
+    position: absolute;
+    width: 100%;
+    min-height: 60%;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    padding: 8px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.76+69 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.76) 69%,
+      rgba(0, 0, 0, 0.76) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.76) 69%,
+      rgba(0, 0, 0, 0.76) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.76) 69%,
+      rgba(0, 0, 0, 0.76) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#c2000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  .title {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 16px 8px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.76+69 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.76) 69%,
+      rgba(0, 0, 0, 0.76) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.76) 69%,
+      rgba(0, 0, 0, 0.76) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.76) 69%,
+      rgba(0, 0, 0, 0.76) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#c2000000',GradientType=0 ); /* IE6-9 */
+  }
+
+  .titleLink {
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+.filterBar {
+  background-color: rgba($color: #000000, $alpha: 0.27);
+}
+
+.reviews {
+  margin: 40px 0;
+}
+
+.imgFluid {
+  width: 100%;
+  max-width: 100%;
+}
+
+.resumeTitle {
+  color: #f70e4a !important;
+}
+
+.videos {
+  margin: 40px 0;
+}
+
+.podcasts {
+  margin: 40px 0;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.classificacoes {
+  ul {
+    li {
+      width: 60px;
+      display: inline-block;
+    }
+  }
+}

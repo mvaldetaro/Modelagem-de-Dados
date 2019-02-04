@@ -1,0 +1,8 @@
+Magno Valdetaro de Oliveira
+Matricula: 10403782775
+
+Versão web:
+http://d2r4kxbsaedxt7.cloudfront.net/
+
+Serviço restful:
+http://54.232.226.251/service/wp-json/wp/v2/
